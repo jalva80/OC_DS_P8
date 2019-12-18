@@ -1,0 +1,5 @@
+# Projet 8: Proof of Concept - Amélioration de l'indexation automatique d'images avec Mask R-CNN
+## Présentation du projet
+
+Nous avons étudié dans le projet 7 comment indexer automatiquement des images au moyen d'un Réseau de Neurones Convolutif (CNN). Nous allons ici essayer d'améliorer les performances obtenues en prétraitant les images. L'idée de départ de cette expérimentation est que l'on va "focaliser" l'apprentissage de notre modèle sur le chien que l'on cherche à classer, en supprimant de l'image tous les éléments que l'on considère comme parasites : personnes, lieu où se situe le canidé, autres animaux, etc…
+La méthode choisie, elle-même basée sur des réseaux de neurones, vise à détecter et classifier les objets présents sur une image. Il s'agit d'une méthode de segmentation d'instance, appelée Mask R-CNN. Nous étudierons dans le présent document le principe de cet algorithme en suivant les évolutions qui ont mené à sa conception, et commenterons sa mise en œuvre sur le projet de classification de races de chien qui nous servira de baseline pour juger les performances obtenues.
